@@ -13,14 +13,14 @@ export class SignupComponent implements OnInit {
   constructor(public service:AuthService,private route:ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.pid = this.route.snapshot.paramMap.get('pid');
   }
 
   signup(user:string,email:string,password:string,repassword:string)
   {
-    this.pid = this.route.snapshot.paramMap.get('pid');
     if(password == repassword)
     {
-        this.service.SignUp(email,password,user);
+        this.service.SignUp(email,password,user,this.pid);
         window.alert('User Account Registered Successfully!!')
     }
     else{

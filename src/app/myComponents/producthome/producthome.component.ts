@@ -16,7 +16,6 @@ export class ProducthomeComponent implements OnInit {
   ngOnInit(): void {
     this.productid = this.route.snapshot.paramMap.get('id');
     this.mydict = this.service.readproductitem(this.productid);
-    console.log(this.mydict);
   }
 
 

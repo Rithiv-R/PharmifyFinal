@@ -12,6 +12,7 @@ export class PdItemcardComponent implements OnInit {
   @Input() name!:string;
   @Input() price!:string;
   @Input() photo!:string;
+  @Input() pid!:string;
   selectedinput!:string;
   constructor(private service:AuthService,private router:Router,) { }
 
@@ -24,12 +25,13 @@ export class PdItemcardComponent implements OnInit {
 
   myorder()
   {
-    if(this.service.isLogged)
-    {
-
+    var x = this.service.isLogged()
+    console.log(x);
+    if(x==false){
+      this.router.navigate(['sign-in',this.pid]);
     }
     else{
-
+      this.router.navigate(['']);
     }
   } 
 

@@ -13,11 +13,17 @@ export class SigninComponent implements OnInit {
   constructor(public service:AuthService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.pid = this.route.snapshot.paramMap.get('pid');
   }
 
   signin(email:string,password:string)
   {
-    this.pid = this.route.snapshot.paramMap.get('pid');
-    this.service.SignIn(email,password);
+    this.service.SignIn(email,password,this.pid);
   }  
+
+  forget(email:string)
+  {
+    this.service.ForgetPass(email);
+  }
+
 }

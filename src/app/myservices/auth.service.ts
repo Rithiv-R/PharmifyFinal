@@ -18,12 +18,12 @@ export class AuthService {
     public ngZone:NgZone,
   ) {}
 
-   async SignIn(email:string,password:string)
+   async SignIn(email:string,password:string,pid:string)
    {
       return this.afAuth.signInWithEmailAndPassword(email,password).then((val)=>{
         this.ngZone.run(()=>{
           localStorage.setItem('userid',email);
-          this.router.navigate(['main']);
+          this.router.navigate(['productadd',pid]);
         });
       })
       .catch((error)=>{
@@ -31,12 +31,12 @@ export class AuthService {
       })
    }
 
-   async SignUp(email:string,password:string,user:string)
+   async SignUp(email:string,password:string,user:string,pid:string)
    {
      return this.afAuth.createUserWithEmailAndPassword(email,password).then(async (result)=>{   
       this.SetUserData(result.user,user);
       localStorage.setItem('userid',email);  
-      this.router.navigate(['main']);
+      this.router.navigate(['productadd',pid]);
      })
      .catch((error)=>{
        window.alert(error.message);
@@ -59,15 +59,20 @@ export class AuthService {
 
    async SignOut()
    {
-     return this.afAuth.signOut().then(()=>{
+     this.afAuth.signOut().then(()=>{
        localStorage.removeItem('userid')
-       this.router.navigate(['sign-in']);
+       console.log(JSON.stringify(localStorage.getItem('userid')!));
      })
    }
 
-   get isLogged():boolean{
-      const user = JSON.parse(localStorage.getItem('userid')!);
-      return user!==null;
+   isLogged():boolean{
+      const user = JSON.stringify(localStorage.getItem('userid')!);
+      console.log(user);
+      var x = false
+      if(user==null){
+        x = true
+      }
+      return x;
    }
 
    async ForgetPass(passowrdResetEmail:string)

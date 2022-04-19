@@ -31,14 +31,14 @@
                               <label for="chk1" class="custom-control-label text-sm">Remember me</label> 
                           </div> 
                           <br>
-                          <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+                          <a href="#" class="ml-auto mb-0 text-sm" (click)="forget(email.value)">Forgot Password?</a>
                       </div>
                       <div class="row mb-3 px-3"> 
-                        <button type="submit" class="btn btn-blue text-center" (click)="signin(email.value,password.value)" [routerLink]='["/main"]'>Login</button> 
+                        <button type="submit" class="btn btn-blue text-center" (click)="signin(email.value,password.value)">Login</button> 
                       </div>
                       <div class="row "> 
                           <small class="font-weight-bold">Don't have an account? 
-                              <a class="text-danger" [routerLink]='["/signup"]'>Register</a>
+                              <a class="text-danger" [routerLink]='["/sign-up",pid]'>Register</a>
                           </small>
                       </div>
                   </div>
