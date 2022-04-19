@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {AuthService} from '../../myservices/auth.service'
-
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -9,13 +9,15 @@ import {AuthService} from '../../myservices/auth.service'
 })
 export class SigninComponent implements OnInit {
 
-  constructor(public service:AuthService) { }
+  @Input() pid: any;
+  constructor(public service:AuthService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   signin(email:string,password:string)
   {
+    this.pid = this.route.snapshot.paramMap.get('pid');
     this.service.SignIn(email,password);
   }  
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {AuthService} from '../../myservices/auth.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,14 +9,15 @@ import {AuthService} from '../../myservices/auth.service';
 })
 export class SignupComponent implements OnInit {
 
-
-  constructor(public service:AuthService) {}
+  @Input() pid: any;
+  constructor(public service:AuthService,private route:ActivatedRoute) {}
 
   ngOnInit(): void {
   }
 
   signup(user:string,email:string,password:string,repassword:string)
   {
+    this.pid = this.route.snapshot.paramMap.get('pid');
     if(password == repassword)
     {
         this.service.SignUp(email,password,user);

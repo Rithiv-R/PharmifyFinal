@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {AuthService} from '../../myservices/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-pd-itemcard',
@@ -10,14 +12,25 @@ export class PdItemcardComponent implements OnInit {
   @Input() name!:string;
   @Input() price!:string;
   @Input() photo!:string;
-  constructor() { }
+  selectedinput!:string;
+  constructor(private service:AuthService,private router:Router,) { }
 
   ngOnInit(): void {
   }
 
+  selectChangeHandler (event: any) {
+    this.selectedinput = event.target.value;
+  }
+
   myorder()
   {
-    
-  }
+    if(this.service.isLogged)
+    {
+
+    }
+    else{
+
+    }
+  } 
 
 }
