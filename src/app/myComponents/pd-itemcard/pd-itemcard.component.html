@@ -1,0 +1,31 @@
+<div class="con1">
+    <div class="head">
+        <p id="name">{{name}}</p>
+    </div>
+    <div class="card">
+        <div class="left">
+            <img [src]="photo">
+        </div>
+        <div class="right">
+            <div class="content">
+                <p id="price">Price&emsp;:&emsp;{{price}}</p>
+                <p id="q">Select the Quantity:</p>
+                <form >
+                    <select name="quantity" id="quan" #selected>
+                        <option value="0">Remove Item</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                      </select>
+                </form>
+            </div>
+            <div class="selection">
+                <button (click)="myorder()">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="grid">
+   <div *ngFor="let item of myarray;let i=index">
+       <app-shop-home2 [name]="item.name" [photo]="item.photo" [offer]="item.offer" [routerLink]="['/shopping',item.name]"></app-shop-home2>
+   </div>
+</div>

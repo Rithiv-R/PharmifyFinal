@@ -1,0 +1,25 @@
+<div class="con1">
+    <div class="header">
+        <app-pd-header></app-pd-header>
+    </div>
+    <div class="con2">
+        <div class="left1">
+            <app-pd-itemcard [name]="mydict.name" [photo]="mydict.photo" [price]="mydict.price"></app-pd-itemcard>
+        </div>
+        <div class="right1">
+            <app-pd-sidebar></app-pd-sidebar>
+        </div>
+    </div>
+    <div class="details">
+        <app-pd-details [des]="mydict.des" [benefits]="mydict.benefits" [benefits1]="mydict.benefits1"></app-pd-details>
+    </div>
+    <div class="reviews">
+        <app-pd-reviews></app-pd-reviews>
+    </div>
+    <div class="feature">
+        <app-features></app-features>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

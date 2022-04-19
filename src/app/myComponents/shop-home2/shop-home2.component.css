@@ -1,0 +1,28 @@
+.con1{
+    width: 375px;
+    margin: 8px 10px;
+}
+
+.card{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px;
+    border-style: dashed;
+    border-radius: 25px;
+}
+
+.content{
+    font-size: 15px;
+    font-weight: 500;
+    
+    padding: 0px 10px;
+}
+
+.off{
+    text-align: right;
+    font-size: 13px;
+
+}

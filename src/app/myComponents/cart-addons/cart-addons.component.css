@@ -1,0 +1,31 @@
+.con1{
+    margin: 5px;
+    width: 300px;
+}
+
+
+.addcoupn{
+    border: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addcoupn i{
+    font-size: 19px;
+}
+
+.address{
+    margin-top: 10px;
+    border: 2px;
+    background-color: deepskyblue;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}

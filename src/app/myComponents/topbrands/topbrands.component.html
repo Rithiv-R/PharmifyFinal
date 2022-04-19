@@ -1,0 +1,27 @@
+<div class="myhead">
+    <div class="row1">
+        <div>
+            <h2>TOP Brands</h2>
+        </div>
+        <div>
+            <button class="button1" id="button1"
+            [style.color]="counter1? '#02b325':'#c5c9c7'" 
+            (click)="previous()" 
+            style="background-color: white;border: 0" >
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <button class="button1" [style.color]="temp1? '#02b325':'#c5c9c7'" (click)="next()" style="background-color: white;border: 0"><i class="fa fa-angle-right"></i></button>
+        </div>
+    </div>
+</div>
+<div class="row">
+        <div *ngFor="let i of myarray;let ind=index">
+            <div class="padder">
+                <div class="card" [ngStyle]="{backgroundColor:getColor(ind)}">
+                    <img [src]="i.image">
+                    <h3>{{i.name}}</h3>
+                </div>
+            </div> 
+        </div>
+</div>
+

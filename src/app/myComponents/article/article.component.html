@@ -1,0 +1,37 @@
+<div class="con1">
+    <h2>Health Articles</h2>
+    <div class="main">
+      <div class="row">
+        <div class="sidebutton">
+          <button class="button2" 
+            [style.color]="counter? '#02b325':'#c5c9c7'" 
+            style="background-color: white;border: 0" (click)="previous()"><i class="fa fa-angle-left" style="font-size:30px;"></i></button>
+        </div>
+        <div class="blogcard">
+          <div *ngFor="let item of myarray;let ind=index">
+            <div class="cont1">
+              <div class="article" [ngStyle]="{background:getColor(ind)}">
+                <a [href]="item.link">
+                  <div class="container">
+                    <img [src]="item.image">
+                    <div class="icon">
+                      <i class="fa fa-bolt"></i>
+                    </div>
+                    <div class="cont2">
+                      <p>
+                        "{{item.content}}"
+                      </p>
+                    </div> 
+                  </div>
+                </a>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <div class="sidebutton">
+          <button [style.color]="counter2? '#02b325':'#c5c9c7'" class="button2" style="background-color: white;border: 0;" (click)="next()"><i class="fa fa-angle-right" style="font-size:30px;"></i></button>
+        </div>
+      </div>
+    </div>  
+  </div>
+  

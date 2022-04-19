@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Artifika&display=swap');
+.slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aqua;
+
+}
+
+.content{
+    max-width: 350px;
+    text-align: end;
+}
+
+.content h2{
+    font-size: 45px;
+    line-height: 50px;
+    font-family: 'Artifika', serif;
+}
+
+.content p{
+    font-size: 12px;
+    margin-top: -12px;
+    margin-bottom: 20px;
+}
+.content button{
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Artifika', serif;
+    box-shadow: none;
+}

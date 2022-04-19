@@ -1,0 +1,13 @@
+.path{
+    padding: 10px;
+    margin-top: 7px;
+    margin-left: 80px;
+    font-size: 12px;
+}
+
+.cardgrid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}

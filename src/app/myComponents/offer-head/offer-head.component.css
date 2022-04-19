@@ -1,0 +1,21 @@
+.con1{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    padding:20px;
+    background-color: rgba(0, 255, 255, 0.211);
+    border-radius: 20px;
+    width: 80%;
+}
+
+.head h2{
+    font-size: 26px;
+}
+
+.info{
+    font-size: 15px;
+    padding-left: 10px;
+}

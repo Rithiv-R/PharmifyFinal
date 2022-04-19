@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pharmify-b3dab": {
+      "hosting": {
+        "pharmify": [
+          "pharmify-b3dab"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pharmify-b3dab"
+  }
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Artifika&family=Courgette&family=Righteous&display=swap');
+/*    font-family: 'Abril Fatface', cursive;
+
+    font-family: 'Artifika', serif;
+
+    font-family: 'Courgette', cursive;
+
+    font-family: 'Righteous', cursive;*/
+
+.service .title h5, h1{
+  font-family: 'Artifika', serif;
+  font-weight: 500;
+}
+.service .title h5{
+  font-size: 15px;
+}
+
+.service .title h1{
+  font-size: 30px;
+}
+
+
+.service{
+  margin: 20px 10px;
+}
+.service .title{
+  text-align: center;
+}
+.service .cards{
+position: relative;
+flex: 1;
+flex-wrap: wrap;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding-bottom: 40px;
+}
