@@ -13,10 +13,10 @@
         </div>
         <div class="right">
             <app-searchbar></app-searchbar>
-            <a href="#">LOGIN</a>
-            <a>ivrith07@gmail.com</a>
-            <a href="#" (click)="signout()">SIGNOUT</a>
-            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a *ngIf="!islogged"  (click)="signin()">LOGIN</a>
+            <a *ngIf="islogged">{{x}}</a>
+            <a *ngIf="islogged"  (click)="signout()">SIGNOUT</a>
+            <a ><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </div>
 </div>

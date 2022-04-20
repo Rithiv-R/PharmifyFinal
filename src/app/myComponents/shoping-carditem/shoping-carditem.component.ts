@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {AuthService} from '../../myservices/auth.service'
 import {Router} from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth'; 
 
 @Component({
   selector: 'app-shoping-carditem',
@@ -10,19 +11,26 @@ import {Router} from '@angular/router';
 export class ShopingCarditemComponent implements OnInit {
 
   @Input() item!:any;
-  constructor(private service:AuthService,private router:Router) { }
-
+  islogged!:boolean;
+  constructor(private service:AuthService,private router:Router,private afAuth:AngularFireAuth) {
+    this.afAuth.authState.subscribe(userResponse => {
+      if (userResponse) { 
+        this.islogged = true
+      } else {
+        this.islogged = false
+      }
+    });
+  }
   ngOnInit(): void {
   }
 
   myorder()
   {
-    var x = this.service.isLogged()
-    if(x==false){
-      this.router.navigate(['sign-in',this.item.pid]);
+    if(this.islogged){
+      this.router.navigate(['productadd',this.item.pid]);
     }
     else{
-      this.router.navigate(['']);
+      this.router.navigate(['sign-in',this.item.pid]);
     }
   } 
 

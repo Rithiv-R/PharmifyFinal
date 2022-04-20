@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {AuthService} from '../../myservices/auth.service';
 import {Router} from '@angular/router';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
+import {OrderService} from '../../myservices/order.service';
 
 @Component({
   selector: 'app-pd-itemcard',
@@ -14,7 +16,16 @@ export class PdItemcardComponent implements OnInit {
   @Input() photo!:string;
   @Input() pid!:string;
   selectedinput!:string;
-  constructor(private service:AuthService,private router:Router,) { }
+  islogged!:boolean;
+  constructor(private service:AuthService,private router:Router,private afAuth:AngularFireAuth,private service1:OrderService) {
+    this.afAuth.authState.subscribe(userResponse => {
+      if (userResponse) { 
+        this.islogged = true
+      } else {
+        this.islogged = false
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -25,13 +36,12 @@ export class PdItemcardComponent implements OnInit {
 
   myorder()
   {
-    var x = this.service.isLogged()
-    console.log(x);
-    if(x==false){
-      this.router.navigate(['sign-in',this.pid]);
+    if(this.islogged){
+      var x = JSON.stringify(localStorage.getItem('userid'));
+      this.service1.addorder(x,this.pid,this.selectedinput,this.price);
     }
     else{
-      this.router.navigate(['']);
+      this.router.navigate(['sign-in',this.pid]);
     }
   } 
 

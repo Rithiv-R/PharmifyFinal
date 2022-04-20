@@ -116,7 +116,8 @@ import { PdSideofferComponent } from './myComponents/pd-sideoffer/pd-sideoffer.c
 import { PdDetailsComponent } from './myComponents/pd-details/pd-details.component';
 import { SigninComponent } from './myComponents/signin/signin.component';
 import { SignupComponent } from './myComponents/signup/signup.component';
-
+import { Signup1Component } from './myComponents/signup1/signup1.component';
+import { Signin1Component } from './myComponents/signin1/signin1.component';
 
 @NgModule({
   declarations: [
@@ -179,6 +180,8 @@ import { SignupComponent } from './myComponents/signup/signup.component';
     PdDetailsComponent,
     SigninComponent,
     SignupComponent,
+    Signup1Component,
+    Signin1Component,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../myservices/auth.service'
+import {Router} from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +10,18 @@ import {AuthService} from '../../myservices/auth.service'
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private service:AuthService) { }
+  islogged!:boolean;
+  x!:string
+  constructor(private service:AuthService,public router:Router,private afAuth:AngularFireAuth) {
+    this.afAuth.authState.subscribe(userResponse => {
+      if (userResponse) { 
+        this.islogged = true
+        this.x = JSON.stringify(localStorage.getItem('userid'));
+      } else {
+        this.islogged = false
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -16,5 +29,11 @@ export class NavbarComponent implements OnInit {
   signout(){
     this.service.SignOut();
   }
+
+  signin()
+  {
+    this.router.navigate(['sign-in1']);
+  }
+  
 
 }
