@@ -28,6 +28,7 @@ export class PdItemcardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.selectedinput = '1';
   }
 
   selectChangeHandler (event: any) {
@@ -38,7 +39,7 @@ export class PdItemcardComponent implements OnInit {
   {
     if(this.islogged){
       var x = JSON.stringify(localStorage.getItem('userid'));
-      this.service1.addorder(x,this.pid,this.selectedinput,this.price);
+      this.service1.addorder(x.slice(1,x.length-1),this.pid,this.selectedinput,this.price);
     }
     else{
       this.router.navigate(['sign-in',this.pid]);

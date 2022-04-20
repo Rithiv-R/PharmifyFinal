@@ -1,6 +1,3 @@
-<div class="item">
-    <app-cart-itemcard></app-cart-itemcard>
-    <app-cart-itemcard></app-cart-itemcard>
-    <app-cart-itemcard></app-cart-itemcard>
-    <app-cart-itemcard></app-cart-itemcard>
+<div class="item" *ngFor="let i of array">
+    <app-cart-itemcard [item]="i"></app-cart-itemcard>
 </div>

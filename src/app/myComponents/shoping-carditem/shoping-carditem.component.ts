@@ -27,7 +27,6 @@ export class ShopingCarditemComponent implements OnInit {
   myorder()
   {
     if(this.islogged){
-      this.router.navigate(['productadd',this.item.pid]);
     }
     else{
       this.router.navigate(['sign-in',this.item.pid]);
