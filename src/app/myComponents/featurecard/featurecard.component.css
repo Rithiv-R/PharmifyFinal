@@ -1,6 +1,6 @@
 .con1{
-    padding: 20px;
-    width: 250px;
+    padding: 10px;
+    width: 350px;
 }
 
 .card{
@@ -8,26 +8,24 @@
     border-radius: 20px;
     border-style: dotted;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .header{
-    padding: 10px 0px 0px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    width: 80%;
 }
 
 .header i{
-    font-size: 45px;
+    font-size: 35px;
     margin: 10px 0px;
-    padding-left: 20px;
+    padding-right:20px;
     color: #00ffa2b2;
-}
-
-.header h2{
-    font-size: 22px;
-}
-
-.content{
-    padding-left: 25px;
-    width: 200px;
 }

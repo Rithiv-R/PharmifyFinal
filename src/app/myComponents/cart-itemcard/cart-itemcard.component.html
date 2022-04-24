@@ -1,14 +1,14 @@
-<div class="con1">
-    <div class="card">
+<div class="con1" >
+    <div class="card" *ngFor="let item of mydict;let i=index">
         <div class="image">
-            <img src="https://cdn01.pharmeasy.in/dam/products/059346/dolo-650mg-strip-of-15-tablets-2-1641535221.jpg" height="100px">
+            <img [src]="item.photo" height="100px">
         </div>
         <div class="details">
-            <p id="name"></p>
-            <p id="quan">Quan 1</p>
-            <p id="price">Rs. Price</p>
+            <p id="name">{{item.name}}</p>
+            <p id="quan">Quan: {{item.quantity}}</p>
+            <p id="price">Price of 1 QTY: {{item.price}}</p>
         </div>
-        <div class="buttons">
+        <div class="buttons" (click)="mydelete(item.id,item.uid)">
             <i class="fa-solid fa-trash-can"></i>
         </div>
     </div>

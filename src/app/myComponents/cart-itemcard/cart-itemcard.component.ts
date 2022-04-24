@@ -17,7 +17,12 @@ export class CartItemcardComponent implements OnInit {
   }
 
   myfetch(){
-    this.service.getcartdetails(this.item);
+    this.mydict= this.service.getcartdetails(this.item);
+  }
+
+  mydelete(id:string,uid:string)
+  {
+    this.service.deletecartdetails(id,uid);
   }
 
 }

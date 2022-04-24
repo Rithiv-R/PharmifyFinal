@@ -1,0 +1,14 @@
+<div class="con1">
+    <div class="card">
+        <div class="head1">
+            <p id="heading">Pharmacy details</p>
+            <div *ngFor="let i of myarr" class="pharmacy">
+                <img [src]="i.photo">
+                <div class="details">
+                    <p id="name">{{i.name}}</p>
+                    <p id="add">{{i.address}}<br>{{i.phone}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

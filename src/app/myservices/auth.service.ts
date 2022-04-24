@@ -81,6 +81,8 @@ export class AuthService {
     this.afs.collection('cart').doc(user).set({
       uid:user,
       mycart:[],
+      orderdelivery:[],
+      placed:0,
     })
     return userRef.set(userData, {
       merge: true,
@@ -93,6 +95,7 @@ export class AuthService {
        localStorage.removeItem('userid');
        console.log(JSON.stringify(localStorage.getItem('userid')!));
      })
+     this.router.navigate(['home']);
    }
 
    async ForgetPass(passowrdResetEmail:string)

@@ -118,6 +118,12 @@ import { SigninComponent } from './myComponents/signin/signin.component';
 import { SignupComponent } from './myComponents/signup/signup.component';
 import { Signup1Component } from './myComponents/signup1/signup1.component';
 import { Signin1Component } from './myComponents/signin1/signin1.component';
+import { ReceipthomeComponent } from './myComponents/receipthome/receipthome.component';
+import { ReceiptMedicalComponent } from './myComponents/receipt-medical/receipt-medical.component';
+import { AboutushomeComponent } from './myComponents/aboutushome/aboutushome.component';
+import { Contactcard2Component } from './myComponents/contactcard2/contactcard2.component';
+import { ContacthomeComponent } from './myComponents/contacthome/contacthome.component';
+import { FaqhomeComponent } from './myComponents/faqhome/faqhome.component';
 
 @NgModule({
   declarations: [
@@ -182,6 +188,12 @@ import { Signin1Component } from './myComponents/signin1/signin1.component';
     SignupComponent,
     Signup1Component,
     Signin1Component,
+    ReceipthomeComponent,
+    ReceiptMedicalComponent,
+    AboutushomeComponent,
+    Contactcard2Component,
+    ContacthomeComponent,
+    FaqhomeComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

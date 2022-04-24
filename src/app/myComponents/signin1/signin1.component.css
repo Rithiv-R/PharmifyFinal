@@ -1,3 +1,4 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 body {
     color: #000;
     overflow-x: hidden;
@@ -7,7 +8,7 @@ body {
 }
 
 .card0 {
-    box-shadow: 0px 4px 8px 0px #757575;
+    box-shadow: 0px 4px 8px 0px #e40000;
     border-radius: 0px
 }
 
@@ -159,10 +160,11 @@ a {
 }
 
 .btn-blue {
-    background-color: #06a7f1;
+    background-color: #34ffcc;
     width: 150px;
-    color: #fff;
-    border-radius: 2px
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 20px 0px;
 }
 
 .btn-blue:hover {

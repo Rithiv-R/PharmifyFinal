@@ -5,10 +5,10 @@
                 Pharmify
             </div>
             <div class="navitems">
-                    <a href="\home">Home</a>
-                    <a href="\shop">Shop</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact us</a>
+                    <a routerLink="/home">Home</a>
+                    <a routerLink="/shopcat">Shop</a>
+                    <a routerLink="/aboutus">About us</a>
+                    <a routerLink="/contactus">Contact us</a>
             </div>
         </div>
         <div class="right">
@@ -16,7 +16,7 @@
             <a *ngIf="!islogged"  (click)="signin()">LOGIN</a>
             <a *ngIf="islogged">{{x}}</a>
             <a *ngIf="islogged"  (click)="signout()">SIGNOUT</a>
-            <a ><i class="fa-solid fa-bag-shopping"></i></a>
+            <a routerLink="/cart"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </div>
 </div>

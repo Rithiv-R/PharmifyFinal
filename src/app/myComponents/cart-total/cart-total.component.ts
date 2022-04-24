@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {OrderService} from '../../myservices/order.service'
 
 @Component({
   selector: 'app-cart-total',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartTotalComponent implements OnInit {
 
-  constructor() { }
+  array!:any
+  constructor(private service1:OrderService) { }
 
   ngOnInit(): void {
+    this.myfetch();
+  }
+
+  myfetch()
+  {
+    var x = JSON.stringify(localStorage.getItem('userid'));
+    this.array = this.service1.getcartvalue(x.slice(1,x.length-1))
   }
 
 }

@@ -1,3 +1,4 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 body {
     color: #000;
     overflow-x: hidden;
@@ -159,9 +160,9 @@ a {
 }
 
 .btn-blue {
-    background-color: #06a7f1;
+    background-color: #34ffcc;
     width: 150px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-radius: 2px
 }
 

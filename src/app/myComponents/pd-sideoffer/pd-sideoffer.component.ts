@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-pd-sideoffer',
@@ -9,6 +9,13 @@ export class PdSideofferComponent implements OnInit {
 
   constructor() { }
 
+  @Input()
+  title!: string;
+  @Input()
+  code!: string;
+  @Input()
+  link!: string;
+  
   ngOnInit(): void {
   }
 

@@ -9,14 +9,14 @@
 }
 
 .head #name{
-    font-size: 38px;
-    font-family: 'Artifika', serif;
+    font-size: 34px;
     font-weight: 600;
+    line-height: 40px;
     padding-bottom: 20px;
 }
 
 .card{
-    background-color: rgba(61, 255, 216, 0.3);
+    background-color: rgba(61, 255, 216, 0.05);
     margin: 10px 15px;
     border: 1px;
     width: 700px;
@@ -34,12 +34,12 @@
     flex-direction: column;
     justify-content: center;
     padding: 25px;
-    height: 200px;
-    width: 250px;
 }
 
 .left img{
-    object-fit: cover;
+    object-fit:contain;
+    height: 200px;
+    width: 250px;
 }
 
 .right{

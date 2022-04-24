@@ -3,14 +3,14 @@
     margin: 10px;
 }
 .card{
-    background-color: rgba(61, 255, 216, 0.3);
+    background-color: rgba(61, 236, 255, 0.15);
     padding: 25px;
     border: 1px;
     border-radius: 20px;
     border-style: dashed;
 }
 
-.cart{
+.cart a{
     border: 3px;
     border-style: solid;
     border-radius: 10px;
@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 17px;
+    text-decoration: none;
 }
 
 .cart i{

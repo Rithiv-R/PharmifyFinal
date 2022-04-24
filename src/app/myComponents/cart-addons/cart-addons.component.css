@@ -9,23 +9,30 @@
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
-
-.addcoupn i{
-    font-size: 19px;
+textarea{
+    resize: none;
+    width: 265px;
+    height: 100px;
+    font-size: 15px;
 }
 
 .address{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.address button{
+    width: 265px;
     margin-top: 10px;
     border: 2px;
     background-color: deepskyblue;
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
     text-align: center;
+    bottom: unset;
 }

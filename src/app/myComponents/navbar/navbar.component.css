@@ -1,55 +1,63 @@
 .navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 10px;
-    background-color: rgba(61, 255, 216, 0.3);
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  background-color: rgba(61, 255, 216, 0.3);
+}
 
-  .left, .right{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-  
-  #name{
-    cursor: default;
-    font-size: 34px;
-    font-family: cooper;
-    margin: 15px 10px 15px 20px;
-    color: rgb(12, 78, 15);
-  }
-  
-  .navbar .navitems{
-    margin: 15px 10px 15px 10px;
-  }
-  
-  .navitems a{
-    padding: 0px 15px;
-    color: rgb(1, 16, 32);
-    border-radius: 10px;
-    font-weight: 600;
-    font-family: 'Open Sans',sans-serif;
-  }
-  
-  .navitems a:hover{
-    cursor: pointer;
-  }
+.left, .right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-  .right{
-    padding-right:20px;
-  }
+#name{
+  cursor: default;
+  font-size: 34px;
+  font-family: cooper;
+  margin: 15px 10px 15px 20px;
+  color: rgb(12, 78, 15);
+}
 
-  .left{
-    padding-left: 20px;
-  }
-  
-  .right a{
-    margin: 15px 10px 15px 10px;
-    
-  }
+.navbar .navitems{
+  margin: 15px 10px 15px 10px;
+}
 
-  .right a i{
-    font-size: x-large;
-  }
+.navitems a{
+  padding: 0px 15px;
+  color: rgb(1, 16, 32);
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.navitems a:hover{
+  cursor: pointer;
+}
+
+.right{
+  padding-right:20px;
+}
+
+.left{
+  padding-left: 20px;
+}
+
+.right a{
+  margin: 15px 10px 15px 10px;
   
+}
+
+.right a{
+  font-size: large;
+}
+
+i{
+  font-size: 28px;
+  padding-bottom: 7px;
+}
+
+a{
+  text-decoration: none;
+}
