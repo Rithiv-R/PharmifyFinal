@@ -20,7 +20,6 @@ export class ReceipthomeComponent implements OnInit {
 
   confirm(myid:string)
   {
-    console.log(myid);
     this.service.placeorder(myid)
   }
 
