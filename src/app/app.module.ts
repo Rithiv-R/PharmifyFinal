@@ -124,6 +124,8 @@ import { AboutushomeComponent } from './myComponents/aboutushome/aboutushome.com
 import { Contactcard2Component } from './myComponents/contactcard2/contactcard2.component';
 import { ContacthomeComponent } from './myComponents/contacthome/contacthome.component';
 import { FaqhomeComponent } from './myComponents/faqhome/faqhome.component';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+
 
 @NgModule({
   declarations: [
@@ -196,6 +198,7 @@ import { FaqhomeComponent } from './myComponents/faqhome/faqhome.component';
     FaqhomeComponent,
   ],
   imports: [
+    NgxGoogleAnalyticsModule.forRoot('G-ZWRKB9FN4N'),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
