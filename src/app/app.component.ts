@@ -14,6 +14,11 @@ declare const gtag: Function;
 export class AppComponent{
   title = 'pharmify';
   constructor(private router:Router){
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', 'G-ZWRKB9FN4N', { 'page_path': event.urlAfterRedirects });
+      }      
+    })
   }
 
 }

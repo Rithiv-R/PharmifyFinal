@@ -198,7 +198,6 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     FaqhomeComponent,
   ],
   imports: [
-    NgxGoogleAnalyticsModule.forRoot('G-ZWRKB9FN4N'),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
