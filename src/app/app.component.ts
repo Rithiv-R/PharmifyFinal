@@ -15,11 +15,12 @@ declare var gtag: any;
 export class AppComponent {
   title = 'pharmify';
   constructor(private router:Router){
-    const navEndEvents = this.router.events.pipe(
-      filter(event=> event instanceof NavigationEnd),
-    );
-    navEndEvents.subscribe((event:any)=>{
-      gtag('config', 'G-ZWRKB9FN4N',{'page_path': event.urlAfterRedirects})
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event:any) => {
+       gtag('event', 'page_view', {
+          page_path: event.urlAfterRedirects
+       })
     })
   }
 }
