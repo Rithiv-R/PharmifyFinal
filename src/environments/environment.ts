@@ -7,6 +7,7 @@ export const environment = {
   firebase:{
     apiKey: "AIzaSyAin0rSUlW6xOJBcTRZhYaA8fCDIdHJfP0",
     authDomain: "pharmify-b3dab.firebaseapp.com",
+    databaseURL: "https://pharmify-b3dab-default-rtdb.firebaseio.com",
     projectId: "pharmify-b3dab",
     storageBucket: "pharmify-b3dab.appspot.com",
     messagingSenderId: "1068224675444",

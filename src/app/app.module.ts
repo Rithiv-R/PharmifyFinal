@@ -125,7 +125,11 @@ import { Contactcard2Component } from './myComponents/contactcard2/contactcard2.
 import { ContacthomeComponent } from './myComponents/contacthome/contacthome.component';
 import { FaqhomeComponent } from './myComponents/faqhome/faqhome.component';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
-
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -200,6 +204,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAnalyticsModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
@@ -241,7 +246,11 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   exports: [
     MatAutocompleteModule,
@@ -280,7 +289,9 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     MatSortModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

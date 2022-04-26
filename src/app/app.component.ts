@@ -4,6 +4,10 @@ import { Component ,AfterViewInit} from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { Router} from '@angular/router'; 
+import * as firebase from 'firebase/compat';
+import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
+import { analyticsInstanceFactory } from '@angular/fire/analytics/analytics.module';
+
 
 declare const gtag: Function;
 @Component({
@@ -13,13 +17,8 @@ declare const gtag: Function;
 })
 export class AppComponent{
   title = 'pharmify';
-  constructor(private router:Router){
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', 'G-ZWRKB9FN4N', { 'page_path': event.urlAfterRedirects });
-      }      
-    })
-  }
-
+  constructor(analytics: AngularFireAnalytics) {
+    analytics.logEvent('custom_event');
+  };
 }
 
