@@ -6,7 +6,7 @@ import { filter } from 'rxjs';
 import { Router} from '@angular/router'; 
 
 
-declare var gtag: any;
+declare const gtag: Function;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
